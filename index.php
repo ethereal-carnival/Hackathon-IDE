@@ -8,9 +8,7 @@
 
 
 <body>
-    <?php
-    include 'assets/parts/header.php';
-?>
+    <?php include 'assets/parts/header.php'; ?>
 </body>
 
 </html>
