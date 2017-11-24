@@ -1,9 +1,11 @@
-<?php session_start(); ?>
-
+<?php
+    session_start();
+    if(!(isset($_SESSION['username']))) header('location: /login');
+?>
 <html>
 
 <head>
-    <title>Register - Hackathon_IDE</title>
+    <title>Leaderboard - uCode</title>
     <?php include '../assets/parts/includes.php' ?>
 </head>
 

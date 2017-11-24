@@ -1,9 +1,11 @@
-<?php session_start(); ?>
-
+<?php
+    session_start();
+    if(!(isset($_SESSION['username']))) header('location: /login');
+?>
 <html>
 
 <head>
-    <title>Code Editor - idE</title>
+    <title>Code Editor - uCode</title>
 
     <?php include '../assets/parts/includes.php'; ?>
 </head>

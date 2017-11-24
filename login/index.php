@@ -1,9 +1,14 @@
-<?php session_start(); ?>
+<?php session_start();
+    if(isset($_SESSION['username'])) {
+        header('location: /code');
+        die();
+    }
+?>
 
 <html>
 
 <head>
-    <title>Login - Hackathon_IDE</title>
+    <title>Login - uCode</title>
     <?php include '../assets/parts/includes.php' ?>
 </head>
 

@@ -31,6 +31,12 @@ header div ul li {
 
 .nav {
     text-decoration: none;
-    color: #2870b8;
+    color: #18436e;
     font-size: 2.5vh;
+    border-right: 1px solid #18436e;
+    padding: 0 1vw;
+}
+
+.last {
+    border: none;
 }
