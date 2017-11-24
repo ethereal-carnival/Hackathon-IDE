@@ -1,10 +1,10 @@
 <html>
 
-    <head>
-        <title>
+<head>
+    <title>
         Hackathon
-        </title>
-    </head>
+    </title>
+</head>
 
 
 <body>
