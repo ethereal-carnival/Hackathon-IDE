@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>Code Editor - idE</title>
+    <title>Code Editor - uCode</title>
 
     <?php include '../assets/parts/includes.php'; ?>
 </head>

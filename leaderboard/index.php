@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>Register - Hackathon_IDE</title>
+    <title>Leaderboard - uCode</title>
     <?php include '../assets/parts/includes.php' ?>
 </head>
 

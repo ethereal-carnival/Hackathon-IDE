@@ -8,7 +8,7 @@
 <html>
 
 <head>
-    <title>Login - Hackathon_IDE</title>
+    <title>Login - uCode</title>
     <?php include '../assets/parts/includes.php' ?>
 </head>
 

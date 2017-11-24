@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>Home - Hackathon_IDE</title>
+    <title>Home - uCode</title>
 
     <?php include 'assets/parts/includes.php'; ?>
 </head>
