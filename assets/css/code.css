@@ -1,0 +1,17 @@
+#api {
+    padding: 13vh 0 0 15vw;
+}
+
+#code_wrapper {
+
+}
+
+#code {
+    resize: none;
+    border-radius: 5px;
+    overflow: scroll;
+    border-color: #18436e;
+    box-shadow: 0px 0px 8px 2px #18436e;
+    width: 55vw;
+    height: 50vh;
+}
