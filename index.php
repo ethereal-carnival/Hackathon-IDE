@@ -1,9 +1,9 @@
 <html>
 
 <head>
-    <title>
-        Hackathon
-    </title>
+    <title>Home - Hackathon_IDE</title>
+
+    <?php include 'assets/parts/includes.php'; ?>
 </head>
 
 
