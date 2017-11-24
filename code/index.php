@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <html>
 
 <head>
@@ -15,6 +17,7 @@
                 <select name="language" id="choice">
                     <option value="c">C</option>
                     <option value="clojure">Clojure</option>
+                    <option value="cpp">C++</option>
                     <option value="cpp11">C++ 11</option>
                     <option value="csharp">C#</option>
                     <option value="java">Java</option>
@@ -40,6 +43,7 @@
 
     <script type="text/javascript">
         document.getElementById("choice").value = "c";
+
     </script>
 </body>
 
