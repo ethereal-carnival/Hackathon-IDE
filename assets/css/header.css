@@ -1,16 +1,18 @@
 header {
     display: inline-block;
-    padding: 2vh 15vw;
-    background-color: #2870b8;
+    padding: 1.5vh 15vw 2.5vh 15vw;
+    background-color: white;
     width: 70vw;
-    height: 3vh;
-    color: white;
+    height: 4vh;
+    color: #2870b8;
+    border-bottom: 1px solid #18436e;
+    box-shadow: 0px 0px 8px 2px #18436e;
 }
 
 #brand {
     margin: 0;
     padding: 0;
-    font-size: 3vh;
+    font-size: 4vh;
     text-decoration: none;
-    color: #fff;
+    color: #2870b8;
 }
