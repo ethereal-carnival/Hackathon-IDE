@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php include '../assets/parts/header.php'; ?>
-
+<div class="padding">
        <div class="center">
      <form action="">
 
@@ -13,9 +13,9 @@
   <br>
   <input placeholder="Password" type="text" name="pwd" value="">
   <br><br>
-  <input type="submit" value="Submit">
+  <input id="submit" type="submit" value="Submit">
            </form>
         </div>
-
+</div>
     </body>
 </html>
