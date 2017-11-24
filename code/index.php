@@ -16,8 +16,9 @@
                     <select name="language" id="choice">
                     <option value="c">C</option>
                     <option value="clojure">Clojure</option>
-                    <option value="cpp">C++ 11</option>
-                    <option value="cs">C#</option>
+                    <option value="cpp">C++</option>
+                    <option value="cpp11">c++11</option>
+                    <option value="csharp">C#</option>
                     <option value="java">Java</option>
                     <option value="js">Javascript</option>
                     <option value="pascal">Pascal</option>
