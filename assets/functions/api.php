@@ -46,11 +46,6 @@ class HackApi
    	 $this->curled = json_decode($response,true);
     }
 
-    public function set_client_secret()
-    {
-   	 $this->client_secret = "bd7336c374ca004b2b10c83d445a54b9d706017c";
-    }
-
     public function init($lang,$code,$inp)
     {
    	 $id = "";
@@ -123,7 +118,19 @@ class HackApi
    	 }
     }
 
-    echo array_curl['output'];
+    public Display()
+    {
+        echo array_curl['output'];
+    }
+
     //final call. get details
 }
+
+
+    HackApi t;
+
+    t.init($language,$source_code,$input);
+    t.compile();
+    t.run();
+
 ?>
