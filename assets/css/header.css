@@ -17,3 +17,20 @@
     text-decoration: none;
     color: #2870b8;
 }
+
+.right {
+    display: inline-block;
+    float: right;
+    margin: -0.5vh;
+}
+
+header div ul li {
+    list-style: none;
+    display: inline;
+}
+
+.nav {
+    text-decoration: none;
+    color: #2870b8;
+    font-size: 2.5vh;
+}
