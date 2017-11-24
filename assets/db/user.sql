@@ -33,7 +33,7 @@ CREATE TABLE `user` (
   `FName` text NOT NULL,
   `LName` text NOT NULL,
   `Username` varchar(20) NOT NULL,
-  `Pa55word` varchar(20) NOT NULL,
+  `Password` varchar(20) NOT NULL,
   `Branch` text NOT NULL,
   `Year` int(1) NOT NULL,
   `MName` text
