@@ -1,3 +1,3 @@
 <header>
-    <a href="/" id="brand">idE</a>
+    <a href="/" id="brand"><strong>idE</strong></a>
 </header>
