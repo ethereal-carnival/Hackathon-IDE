@@ -6,11 +6,11 @@
     <body>
         <?php include '../assets/parts/header.php'; ?>
 
-        <form id="a" action="">
-  Name:
-  <input placeholder="Name" type="text" name="name" value="">
+        <form action="">
+
+  <input id="name" placeholder="Name" type="text" name="name" value="">
   <br>
-  Password:
+
   <input placeholder="Password" type="text" name="pwd" value="">
   <br><br>
   <input type="submit" value="Submit">
