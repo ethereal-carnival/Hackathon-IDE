@@ -1,12 +1,14 @@
 <?php
 
 
-
+$lang = $_POST['language'];
+$code = $_POST['source_code'];
+$in = $_POST['InputData'];
 class HackApi
 {
-    private $language = $_POST['language']; // the language of your code
-    private $source_code=$_POST['source_code']; // the source code
-    private $input=$_POST['InputData']; // the input you give
+    private $language; // the language of your code
+    private $source_code; // the source code
+    private $input; // the input you give
     private $client_secret="bd7336c374ca004b2b10c83d445a54b9d706017c"; // your secret client code
 
     private $curled=""; // this is the data we receive from hackerearth!
@@ -64,14 +66,7 @@ class HackApi
    	 $this->input = $inp;
    	 $this->source_code=stripslashes($code); //removing stray '/'
 
-   	 if($lang == "C++")
-   		 $lang = "CPP";
-   	 else if($lang == "C#")
-   		 $lang = "CSHARP";
-   	 else if($lang == "C++11")
-   		 $lang = "CPP11";
-   	 else
-   		 $lang = strtoupper($lang);
+   	 $lang = strtoupper($lang);
    	 $this->language = $lang;
 
    	 // converting language to hackerearth friendly
@@ -118,19 +113,20 @@ class HackApi
    	 }
     }
 
-    public Display()
+    public function Display()
     {
-        echo array_curl['output'];
+        echo $this->output;
     }
 
     //final call. get details
 }
 
 
-    HackApi t;
+    $t = new HackApi;
 
-    t.init($language,$source_code,$input);
-    t.compile();
-    t.run();
+    $t->init($lang,$code,$in);
+    $t->compile();
+    $t->run();
+    $t->Display();
 
 ?>
