@@ -9,11 +9,11 @@
 <body>
     <?php include '../assets/parts/header.php'; ?>
     <section id="api">
-        <form action="#" method="post">
+        <form action="../assets/functions/api.php" method="post">
             <article id="code_wrapper">
                 <header id="header_code">
                     Choose your language
-                    <select name="language">
+                    <select name="language" id="choice">
                     <option value="c">C</option>
                     <option value="clojure">Clojure</option>
                     <option value="cpp">C++ 11</option>
@@ -29,12 +29,12 @@
                 </header>
                 <textarea id="code" class="input" placeholder="Enter code here" name="source_code"></textarea>
                 <footer id="footer_code">
-                    <button id="run_button" name="submit">RUN <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+                    <button id="run_button" name="submit">RUN <i class="fa fa-arrow-circle-o-right" aria-hidden="true" onclick="execute();"></i></button>
                 </footer>
             </article>
 
             <article id="io_wrapper">
-                <textarea class="input" id="input_data" placeholder="Provide custom input here"></textarea>
+                <textarea class="input" id="input_data" placeholder="Provide custom input here" name="InputData"></textarea>
                 <p class="input" id="output_data"></p>
             </article>
         </form>
