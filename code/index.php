@@ -17,11 +17,12 @@
             <div id="ques">
                 <?php
                     $con = mysqli_connect('localhost','root','','ucode');
-                    $select_query = "select description from question;";
+                    $select_query = "select description, U_id from question;";
 
                     $result = mysqli_query($con, $select_query) or die(mysqli_error($con));
                     $row = mysqli_fetch_array($result);
                     echo "$row[0]";
+                    echo "<p id='hidden' style='visibility: hidden'>$row[1]</p>"
                 ?>
             </div>
 
@@ -46,6 +47,7 @@
                 <textarea id="code" class="input" placeholder="Enter code here" name="source_code"></textarea>
                 <footer id="footer_code">
                     <button id="run_button" name="submit" onclick="execute();">RUN <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+                    <button id="save_button" name="submit" onclick="save();">SAVE &nbsp;<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
                 </footer>
             </article>
 
@@ -57,7 +59,6 @@
 
         <script type="text/javascript">
             document.getElementById("choice").value = "c";
-
         </script>
     </body>
 

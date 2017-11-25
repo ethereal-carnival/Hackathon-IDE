@@ -12,3 +12,17 @@ function execute() {
         }
     });
 }
+
+function save() {
+    $.ajax({
+        url: "/assets/functions/save.php",
+        data: {
+            $U_id : document.getElementById("hidden").innerHTML,
+            source_code : document.getElementById("code").value
+        },
+        type: 'post',
+        success: function (output) {
+            alert("Successfully saved");
+        }
+    });
+}

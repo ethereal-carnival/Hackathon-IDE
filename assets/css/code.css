@@ -61,6 +61,18 @@
     cursor: pointer;
 }
 
+#save_button {
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: none;
+    background-color: #bbb;
+    padding: 1.5vh 2.5vw;
+    float: right;
+    font-size: 2vh;
+    color: #fff;
+    cursor: pointer;
+}
+
 #io_wrapper {
     margin-top: 1vh;
     border-color: #18436e;
