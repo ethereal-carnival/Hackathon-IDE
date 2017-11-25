@@ -1,0 +1,53 @@
+.form_wrapper {
+    padding: 25vh 15vw 0 15vw;
+}
+
+.form_box {
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+    height: 14vh;
+    border: 1px solid #bbb;
+}
+
+#new_question {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    resize: none;
+    overflow: scroll;
+    width: 60vw;
+    height: 7vh;
+    padding: 1vh 0.5vw;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    font-size: 1.5vh;
+}
+
+#submit_question {
+    cursor: pointer;
+    margin-top: 1vh;
+    height: 4vh;
+    width: 4vw;
+    padding: 0.5vh 0.5vw;
+    text-transform: uppercase;
+    float: right;
+    margin-right: 1vw;
+    border: none;
+    background: none;
+    border: 1px solid #5cb85c;
+    color: #376e37;
+    border-radius: 10px;
+}
+
+#submit_question:hover {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+#submit_question:active {
+    background-color: #376e37;
+}
+
+#submit_question:focus {
+    outline: none;
+}

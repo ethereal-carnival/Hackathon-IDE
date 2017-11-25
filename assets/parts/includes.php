@@ -5,6 +5,7 @@
 <link href="/assets/css/leaderboard.css" rel="stylesheet" />
 <link href="/assets/css/login.css" rel="stylesheet" />
 <link href="/assets/css/register.css" rel="stylesheet" />
+<link href="/assets/css/admin.css" rel="stylesheet" />
 
 <script src="/assets/javascript/main.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
