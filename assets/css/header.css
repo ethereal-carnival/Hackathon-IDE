@@ -11,11 +11,12 @@
 }
 
 #brand {
-    margin: 0;
+    padding-bottom: 1vh;
     padding: 0;
     font-size: 4vh;
     text-decoration: none;
     color: #2870b8;
+    padding-left: 2.5vw;
 }
 
 .right {
@@ -39,4 +40,8 @@ header div ul li {
 
 .last {
     border: none;
+}
+
+a {
+    text-decoration: none;
 }
