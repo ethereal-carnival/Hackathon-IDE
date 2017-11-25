@@ -32,12 +32,12 @@ CREATE TABLE `user` (
   `Email_id` varchar(20) NOT NULL,
   `FName` text NOT NULL,
   `LName` text NOT NULL,
-  `SAP_ID` int(9) NOT NULL PRIMARY KEY,
+  `SAP_ID` int NOT NULL PRIMARY KEY,
   `Contact no.` int(10) NOT NULL,
   `Username` varchar(20) NOT NULL,
   `Password` varchar(20) NOT NULL,
-  `Branch` text NOT NULL,
-  `Year` int(1) NOT NULL,
+  `Branch` text ,
+  `Year` int NOT NULL,
   `MName` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
