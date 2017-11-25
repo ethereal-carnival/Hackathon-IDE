@@ -1,14 +1,19 @@
-.center {
-    width: auto;
-    border: 5px solid white;
-    vertical-align: middle;
-    padding: 10px;
-    text-align: center;
-    background-color:#3f1112;
+.inp-group {
+    margin: 2vh 0;
 }
 
-.padding{
-     padding: 20vh 20vw;
+#register_wrapper {
+    padding-top: 23vh;
 }
 
-//#3f1112
+#register_box {
+    border-radius: 10px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 3vh 7vw;
+}
+
+.inp-reg {
+    width: 25vw;
+    margin-right: 2vw;
+}

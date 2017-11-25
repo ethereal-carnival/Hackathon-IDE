@@ -1,0 +1,28 @@
+<?php session_start();
+    if(isset($_SESSION['username'])) echo "
+    <html><head><script type='text/javascript'>
+    alert('Please log out before registering as another user');
+    window.location.href = '/';
+    </script></head></html>";
+?>
+<html>
+    <head>
+        <title>Register - uCode</title>
+        <?php include '../assets/parts/includes.php' ?>
+    </head>
+    <body>
+        <?php include '../assets/parts/header.php'; ?>
+<div class="padding">
+       <div class="center">
+     <form action="">
+
+  <input id="name" placeholder="Name" type="text" name="name" value="">
+  <br>
+  <input placeholder="Password" type="text" name="pwd" value="">
+  <br><br>
+  <input id="submit" type="submit" value="Submit">
+           </form>
+        </div>
+</div>
+    </body>
+</html>
