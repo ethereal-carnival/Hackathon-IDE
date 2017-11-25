@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 24, 2017 at 11:47 PM
+-- Generation Time: Nov 25, 2017 at 01:07 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -25,20 +25,13 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `Leaderboard`
 --
 
-CREATE TABLE `user` (
-  `Email_id` varchar(20) NOT NULL,
-  `FName` text NOT NULL,
-  `LName` text NOT NULL,
-  `SAP_ID` int(9) NOT NULL PRIMARY KEY,
-  `Contact no.` int(10) NOT NULL,
-  `Username` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
-  `Branch` text NOT NULL,
-  `Year` int(1) NOT NULL,
-  `MName` text
+CREATE TABLE `Leaderboard` (
+  `SAP_ID` int(11) NOT NULL FOREIGN KEY,
+  `Rank` int(11) NOT NULL,
+  `Score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 
