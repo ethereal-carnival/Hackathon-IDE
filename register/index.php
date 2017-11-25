@@ -1,3 +1,10 @@
+<?php session_start();
+    if(isset($_SESSION['username'])) echo "
+    <html><head><script type='text/javascript'>
+    alert('Please log out before registering as another user');
+    window.location.href = '/';
+    </script></head></html>";
+?>
 <html>
     <head>
         <title>Register - uCode</title>
