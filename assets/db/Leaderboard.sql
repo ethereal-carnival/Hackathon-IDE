@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Leaderboard` (
-  `SAP_ID` int(11) NOT NULL FOREIGN KEY,
-  `Rank` int(11) NOT NULL,
-  `Score` int(11) NOT NULL
+  `SAP_ID` int NOT NULL FOREIGN KEY,
+  `Rank` int NOT NULL,
+  `Score` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 
