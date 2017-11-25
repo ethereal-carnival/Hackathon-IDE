@@ -28,7 +28,7 @@
 
             <article id="code_wrapper">
                 <header id="header_code">
-                    Choose your language
+                    Choose your language:
                     <select name="language" id="choice">
                     <option value="c">C</option>
                     <option value="clojure">Clojure</option>
@@ -57,8 +57,42 @@
             </article>
         </section>
 
+        <aside id="side_leaderboard">
+            <div id="table_box_code">
+                <center>
+                    <h1 id="top">TOP 10</h1>
+                </center>
+                <table id="table_code">
+                    <tbody>
+                        <tr id="heading_row_code">
+                            <th>Username</th>
+                            <th>Rank</th>
+                            <th>Score</th>
+                        </tr>
+
+                        <?php
+                            $con = mysqli_connect('localhost','root','','ucode');
+                            $select_query = "select username, rank, score from leaderboard;";
+
+                            $result = mysqli_query($con, $select_query) or die(mysqli_error($con));
+                            $i=0;
+                            while(($row = mysqli_fetch_array($result))!=null && $i++<10) echo "
+                                <tr>
+                                    <td>$row[0]</td>
+                                    <td>$row[1]</td>
+                                    <td>$row[2]</td>
+                                </tr>";
+                            ?>
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+
+        <?php include '../assets/parts/footer.php'; ?>
+
         <script type="text/javascript">
             document.getElementById("choice").value = "c";
+
         </script>
     </body>
 

@@ -1,5 +1,5 @@
 #api {
-    padding: 13vh 0 0 15vw;
+    padding: 13vh 0 0 10vw;
 }
 
 #ques {
@@ -23,6 +23,18 @@
 #header_code {
     padding: 1vh 0.5vw;
     border-bottom: 1px solid #bbb;
+}
+
+select {
+    padding: 0.5vh 0.5vw;
+    margin-left: 2vh;
+    border-radius: 10px;
+}
+
+select:focus {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
 }
 
 #code {
@@ -74,7 +86,7 @@
 }
 
 #io_wrapper {
-    margin-top: 1vh;
+    margin-top: 3vh;
     border-color: #18436e;
     border-radius: 5px;
     box-shadow: 0px 0px 8px 2px #18436e;
@@ -85,11 +97,41 @@
 
 #input_data {
     width: 55vw;
-    height: 5vh;
+    height: 7vh;
     border-bottom: 1px solid #bbb;
 }
 
 #output_data {
     width: 55vw;
     height: 15vh;
+}
+
+#side_leaderboard {
+    position: absolute;
+    top: 11vh;
+    right: 10vw;
+    float: right;
+}
+
+#table_box_code {
+    width: 23vw;
+    background-color: #fff;
+    border-color: #18436e;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 2px #18436e;
+    padding: 0;
+    margin: 0;
+}
+
+#table_code {
+    border-collapse: collapse;
+}
+
+#heading_row_code:hover {
+    background-color: rgba(0,0,0,0);
+}
+
+#top {
+    margin-bottom: 0;
+    padding-top: 1vh;
 }
