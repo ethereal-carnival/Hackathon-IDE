@@ -27,8 +27,8 @@
                         <input class="inp-txt inp-reg" type="text" placeholder="Contact Number" name="number" />
                     </article>
                     <article class="inp-group">
-                        <input class="inp-txt inp-reg" type="text" placeholder="Course" name="course" />
-                        <input class="inp-txt inp-reg" type="number" placeholder="Year" name="Year" />
+                        <input class="inp-txt inp-reg" type="text" placeholder="Course (only for students)" name="course" />
+                        <input class="inp-txt inp-reg" type="number" placeholder="Year (only for students)" name="Year" />
                     </article>
                     <article>
                         <input type="submit" name="Submit" value="Log in" class="btn-submit"/>
