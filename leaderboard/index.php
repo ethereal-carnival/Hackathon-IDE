@@ -14,15 +14,16 @@
 
         <div id="table_wrapper">
             <center>
-                <table id="table">
-                    <tbody>
-                        <tr>
-                            <th>Username</th>
-                            <th>Rank</th>
-                            <th>Score</th>
-                        </tr>
+                <div id="table_box">
+                    <table id="table">
+                        <tbody>
+                            <tr id="heading_row">
+                                <th>Username</th>
+                                <th>Rank</th>
+                                <th>Score</th>
+                            </tr>
 
-                        <?php
+                            <?php
                             $con = mysqli_connect('localhost','root','','ucode');
                             $select_query = "select username, rank, score from leaderboard;";
 
@@ -34,8 +35,9 @@
                                     <td>$row[2]</td>
                                 </tr>";
                             ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </center>
         </div>
     </body>

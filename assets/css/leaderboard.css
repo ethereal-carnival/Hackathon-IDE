@@ -2,17 +2,22 @@
     padding-top: 13vh;
 }
 
-#table {
+#table_box {
+    padding: 1vh 0 0 0;
     background-color: #fff;
-    padding: 2vh 1vw;
-    border: none;
     border-radius: 5px;
+    display: inline-block;
+}
+
+#table {
+    border: none;
     border-collapse: collapse;
 }
 
 tr {
     padding: 0;
     margin: 0;
+    transition: all 0.2s linear;
 }
 
 th,td {
@@ -31,4 +36,8 @@ th {
 
 tr:hover {
     background-color: #ddd;
+}
+
+#heading_row:hover {
+    background-color: #fff;
 }
