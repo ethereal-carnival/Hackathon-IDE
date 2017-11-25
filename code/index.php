@@ -22,7 +22,7 @@
                     $result = mysqli_query($con, $select_query) or die(mysqli_error($con));
                     $row = mysqli_fetch_array($result);
                     echo "$row[0]";
-                    echo "<p id='hidden' style='visibility: hidden'>$row[1]</p>"
+                    echo "<p id='hidden' style='display: none'>$row[1]</p>"
                 ?>
             </div>
 
