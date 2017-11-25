@@ -18,5 +18,9 @@
     $query = "insert into users VALUES ( '$fname', '$lname', '$mname', $sap, '$username', '$password', '$email', $number, '$branch', '$year');";
     mysqli_query($con, $query);
 
+    $row = mysqli_fetch_array(mysqli_query($con,"select count(*) from leaderboard;"));
+    $count = $row[0]+1;
+    mysqli_query($con, "insert into leaderboard VALUES ( '$username', $count, 0);");
+
     header('location: /');
 ?>
