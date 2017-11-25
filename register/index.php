@@ -16,7 +16,7 @@
                     </article>
                     <article class="inp-group">
                         <input class="inp-txt inp-reg" type="text" placeholder="Middle Name" name="mname" />
-                        <input class="inp-txt inp-reg" type="text" placeholder="SAP ID" name="sap" />
+                        <input class="inp-txt inp-reg" type="number" placeholder="SAP ID" name="sap" />
                     </article>
                     <article class="inp-group">
                         <input class="inp-txt inp-reg" type="text" placeholder="Username" name="username" />
@@ -24,11 +24,11 @@
                     </article>
                     <article class="inp-group">
                         <input class="inp-txt inp-reg" type="text" placeholder="Email ID (.upes.ac.in)" name="email" />
-                        <input class="inp-txt inp-reg" type="text" placeholder="Contact Number" name="number" />
+                        <input class="inp-txt inp-reg" type="number" placeholder="Contact Number" name="number" />
                     </article>
                     <article class="inp-group">
-                        <input class="inp-txt inp-reg" type="text" placeholder="Course (only for students)" name="course" />
-                        <input class="inp-txt inp-reg" type="number" placeholder="Year (only for students)" name="Year" />
+                        <input class="inp-txt inp-reg" type="text" placeholder="Branch (only for students)" name="branch" />
+                        <input class="inp-txt inp-reg" type="text" placeholder="Year (only for students)" name="year" />
                     </article>
                     <article>
                         <input type="submit" name="Submit" value="Log in" class="btn-submit"/>
