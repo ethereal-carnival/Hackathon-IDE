@@ -17,7 +17,7 @@
             <div id="ques">
                 <?php
                     $con = mysqli_connect('localhost','root','','ucode');
-                    $select_query = "select description, U_id from question;";
+                    $select_query = "select description, uID from questions where status='0';";
 
                     $result = mysqli_query($con, $select_query) or die(mysqli_error($con));
                     $row = mysqli_fetch_array($result);
@@ -72,7 +72,7 @@
 
                         <?php
                             $con = mysqli_connect('localhost','root','','ucode');
-                            $select_query = "select username, rank, score from leaderboard;";
+                            $select_query = "select username, marks, rank from billboard;";
 
                             $result = mysqli_query($con, $select_query) or die(mysqli_error($con));
                             $i=0;

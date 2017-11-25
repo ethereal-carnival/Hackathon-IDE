@@ -20,7 +20,7 @@
 
     $row = mysqli_fetch_array(mysqli_query($con,"select count(*) from leaderboard;"));
     $count = $row[0]+1;
-    mysqli_query($con, "insert into leaderboard VALUES ( '$username', $count, 0);");
+    if(strpos($email,"@stu.upes.ac.in")) mysqli_query($con, "insert into billboard VALUES ( '$username', $count, 0);");
 
     header('location: /');
 ?>

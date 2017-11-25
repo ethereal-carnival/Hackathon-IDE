@@ -8,4 +8,5 @@
 <link href="/assets/css/admin.css" rel="stylesheet" />
 
 <script src="/assets/javascript/main.js" type="text/javascript"></script>
+<script src="/assets/javascript/validate.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
