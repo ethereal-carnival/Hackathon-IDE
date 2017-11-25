@@ -1,5 +1,5 @@
 <header id="header">
-    <a href="/"><img src="/assets/images/logo.png" style="height: 4vh; position: absolute" /><span id="brand"><strong>Code</strong></a>
+    <a href="/"><img src="/assets/images/logo.png" style="height: 4vh; position: absolute" /><span id="brand"><strong>Code</strong></span></a>
     <div class="right">
         <ul>
             <?php if(isset($_SESSION['username'])) {
