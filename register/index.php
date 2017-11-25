@@ -38,7 +38,7 @@
                         <input class="inp-txt inp-reg" type="text" placeholder="Year (only for students)" name="year" />
                     </article>
                     <article>
-                        <input type="submit" name="Submit" value="Log in" class="btn-submit"/>
+                        <input type="submit" name="Submit" value="Submit" class="btn-submit"/>
                     </article>
                 </form>
             </section>

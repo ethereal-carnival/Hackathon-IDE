@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();
+    if(!(isset($_SESSION['admin']))) header('location: /');
+?>
 <html>
 
 <head>
@@ -13,7 +15,7 @@
     <div class="form_wrapper">
         <center>
             <div class="form_box">
-                <form action="add_question.php" method="post">
+                <form action="../assets/functions/add_question.php" method="post">
                     <textarea id="new_question" name="question" placeholder="Please enter the new question here...."></textarea><br />
                     <input type="submit" name="submit" value="submit" id="submit_question" />
                 </form>
