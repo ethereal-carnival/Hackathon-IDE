@@ -8,7 +8,7 @@ class HackApi
 {
     //Setting up the Hackerearth API
     $hackerearth = array(
-		'client_secret' => '                 ', //(REQUIRED) Obtain this by registering your app at http://www.hackerearth.com/api/register/
+		'client_secret' => 'da4ef8ece51cd537d573503dcf569053e618bf9b', //(REQUIRED) Obtain this by registering your app at http://www.hackerearth.com/api/register/
         'time_limit' => '5',   //(OPTIONAL) Time Limit (MAX = 5 seconds )
         'memory_limit' => '262144'  //(OPTIONAL) Memory Limit (MAX = 262144 [256 MB])
 	);
