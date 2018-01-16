@@ -6,20 +6,22 @@ $code = $_POST['source_code'];
 $in = $_POST['InputData'];
 class HackApi
 {
-    private $language; // the language of your code
-    private $source_code; // the source code
-    private $input; // the input you give
-    private $client_secret="bd7336c374ca004b2b10c83d445a54b9d706017c"; // your secret client code
+    //Setting up the Hackerearth API
+    $hackerearth = array(
+		'client_secret' => '                 ', //(REQUIRED) Obtain this by registering your app at http://www.hackerearth.com/api/register/
+        'time_limit' => '5',   //(OPTIONAL) Time Limit (MAX = 5 seconds )
+        'memory_limit' => '262144'  //(OPTIONAL) Memory Limit (MAX = 262144 [256 MB])
+	);
+
+    private $config = Array();
 
     private $curled=""; // this is the data we receive from hackerearth!
     private $parameters=""; // the parameterised version.
 
-    private $compile_url = "http://api.hackerearth.com/code/compile/"; // end point of compilation
-    private $run_url = "http://api.hackerearth.com/code/run/"; // end point of running the source code
+    private $compile_url = "https://api.hackerearth.com/v3/code/compile/"; // end point of compilation
+    private $run_url = "https://api.hackerearth.com/v3/code/run/"; // end point of running the source code
 
     public $id; // code_id on hackerearth
-    public $memory_used; // memory used by the code
-    public $time_used; // time used to execute the code
     public $message; // message. if any missing arguments.
     public $compile_status; // compilation error or OK
     public $run_status; // run status of the code
@@ -36,15 +38,20 @@ class HackApi
    	 $parameters -> list of parameters to post.
    	 $n -> count of parameters.
    	 */
-   	 $ch = curl_init();
-   	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-   	 curl_setopt($ch, CURLOPT_URL, $url);
-   	 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-   	 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-   	 curl_setopt($ch, CURLOPT_POST,$n);
-   	 curl_setopt($ch, CURLOPT_POSTFIELDS,$p);
-   	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-   	 $response = curl_exec($ch);
+   	// Get cURL resource
+	$curl = curl_init();
+	// Seting some options
+	curl_setopt_array($curl, array(
+    CURLOPT_RETURNTRANSFER => 1,
+    CURLOPT_URL => $url,
+    CURLOPT_POST => 1,
+    CURLOPT_CAINFO => 'cacert.pem',
+    CURLOPT_SSL_VERIFYPEER => 'true',
+    CURLOPT_ENCODING => 'UTF-8',
+    CURLOPT_POSTFIELDS =>$p));
+
+
+   	 $response = curl_exec($curl);
    	 $this->curled = json_decode($response,true);
     }
 
@@ -52,7 +59,6 @@ class HackApi
     {
    	 $id = "";
    	 $memory_used = "";
-   	 $time_used = "";
    	 $message = "";
    	 $compile_status = "";
    	 $run_status = "";
@@ -63,22 +69,32 @@ class HackApi
    	 $run_status_detail = "";
    	 //all values have been reset to avoid any discrepancies.
 
-   	 $this->input = $inp;
-   	 $this->source_code=stripslashes($code); //removing stray '/'
-
-   	 $lang = strtoupper($lang);
-   	 $this->language = $lang;
+    //Feeding Data Into Hackerearth API
+    $this->config['time']='5';	 	//(OPTIONAL) Your time limit in integer and in unit seconds
+    $this->config['memory']='262144'; //(OPTIONAL) Your memory limit in integer and in unit kb
+    $this->config['source']=stripslashes($code);    	//(REQUIRED) Your source code for which you want to use hackerEarth api
+    $this->config['input']=$inp;     	//(OPTIONAL) Input against which you have to test your source code
+    $this->config['language']= strtoupper($lang) ;   	//(REQUIRED) Choose any one of them
+						 	// C, CPP, CPP11, CLOJURE, CSHARP, JAVA, JAVASCRIPT, HASKELL, PERL, PHP, PYTHON, RUBY
 
    	 // converting language to hackerearth friendly
+     //building the entire parameter list.
 
-   	 $this->parameters="client_secret=".$this->client_secret."&source=".$this->source_code."&lang=".$this->language."&input=".$this->input;
-   	 //building the entire parameter list.
+      $this->parameters =  array(
+        				'client_secret' => $this->hackerearth['client_secret'],
+                        'time_limit' => $this->hackerearth['time_limit']||$this->config['time'],
+        				'memory_limit' => $this->hackerearth['memory_limit']||$this->config['memory'],
+        				'source' => $this->config['source'],
+        				'input' => $this->config['input'],
+                        'lang' => $this->config['language']
+    )
+
     }
     // Iniitiate the variables. First Step.
 
     public function compile()
     {
-   	 $this->curl_it($this->compile_url,$this->parameters,4);
+   	 $this->curl_it($this->compile_url,$this->parameters,6);
    	 $this->parse_data(1);
     }
     //call this function to compile the code
