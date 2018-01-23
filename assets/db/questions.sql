@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `question`
 --
 
-CREATE TABLE `question` (
+CREATE TABLE `questions` (
   `Description` text NOT NULL,
-  `U_id` varchar(10) NOT NULL,
+  `u_id` varchar(10) NOT NULL,
   `S_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;

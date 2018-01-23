@@ -8,6 +8,7 @@ function execute() {
         },
         type: 'post',
         success: function (output) {
+            alert("Hi");
             document.getElementById("output_data").innerHTML = output;
         }
     });
