@@ -46,7 +46,7 @@
                 </header>
                 <textarea id="code" class="input" placeholder="Enter code here" name="source_code"></textarea>
                 <footer id="footer_code">
-                    <button id="run_button" name="submit" onclick="execute(); alert('Hi');">RUN <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+                    <button id="run_button" name="submit" onclick="execute(); alert('Running......');">RUN <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                     <button id="save_button" name="submit" onclick="save();">SAVE &nbsp;<i class="fa fa-floppy-o" aria-hidden="true"></i></button>
                 </footer>
             </article>

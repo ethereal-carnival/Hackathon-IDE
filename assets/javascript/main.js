@@ -8,7 +8,7 @@ function execute() {
         },
         type: 'post',
         success: function (output) {
-            alert("Hi");
+            alert("Output Generated!");
             document.getElementById("output_data").innerHTML = output;
         }
     });
